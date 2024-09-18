@@ -11,4 +11,17 @@ public class Seccion {
         this.capacidad = capacidad;
         this.contenedores = new ArrayList<>();
     }
+
+    public void agregarContenedor(){
+
+    }
+    public void moverContenedor(){
+
+    }
+    public void verContenedoresSeccion(){
+
+    }
+    public void calcPesoTotal(){
+        
+    }
 }
