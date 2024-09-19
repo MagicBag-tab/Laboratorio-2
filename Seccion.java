@@ -25,9 +25,14 @@ public class Seccion {
         }
         return false;
     }
-    
-    public void moverContenedor(){
 
+    public boolean moverContenedor(int filaA, int columnaA, int filaN, int columnaN){
+        if (contenedores[filaA][columnaA] == null && contenedores[filaN][columnaN] != null){
+            return false;
+        }
+        contenedores[filaN][columnaN] = contenedores[filaA][columnaA];
+        contenedores[filaA][filaN] = null;
+        return true;
     }
     public void verContenedoresSeccion(){
 
