@@ -40,4 +40,8 @@ public class Seccion {
     public void calcPesoTotal(){
 
     }
+
+    public String getNombre(){
+        return nombre;
+    }
 }
