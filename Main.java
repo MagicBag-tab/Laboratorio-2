@@ -33,13 +33,11 @@ public class Main {
                     scanner.nextLine();
                     System.out.println("Ingrese el producto: ");
                     String product = scanner.nextLine();
-                    scanner.nextLine();
                     System.out.println("Ingrese el peso del contenedor: ");
                     double peso = scanner.nextDouble();
                     scanner.nextLine();
                     System.out.println("Ingrese el destino del contenedor: ");
                     String destiny = scanner.nextLine();
-                    scanner.nextLine();
 
                     Contenedor cont = new Contenedor(id, product, peso, destiny);
 
@@ -67,7 +65,7 @@ public class Main {
                             break;
                         }
 
-                        if (confirm = true){
+                        if (confirm){
                             System.out.println("El contenedor fue agregado exitosamente");
                         }else{
                             System.out.println("El contenedor no fue agregado al exceder la capacidad del peso");
@@ -75,7 +73,6 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Mostrar Información de los Contenedores");
-                    System.out.println("Mover Contenedores");
                     System.out.println("Seleccione una sección: \n" +
                     "1. Productos Electrónicos \n" +
                     "2. Ropa \n" +
@@ -103,12 +100,18 @@ public class Main {
                     if (select != null){
                         System.out.println("Los contenedores de la sección " + select.getNombre() + "son: ");
                         Contenedor [][] contenedores = select.verContenedoresSeccion();
+
+                        boolean empty = true;
                         for(int fila = 0; fila < contenedores.length; fila ++){
                             for(int columna = 0; columna < contenedores[fila].length; columna ++){
                                 if(contenedores[fila][columna] != null){
                                     System.out.println(contenedores[fila][columna].toString());
+                                    empty = false;
                                 }
                             }
+                        }
+                        if (empty) {
+                            System.out.println("No hay contenedores en esta sección.");
                         }
                     }
                     break;
@@ -203,8 +206,8 @@ public class Main {
             System.out.println("Ingrese una opción");
             op = scanner.nextInt();
 
-            scanner.close();
         }
+        scanner.close();
 
     }
 }
