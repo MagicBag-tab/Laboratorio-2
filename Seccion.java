@@ -34,8 +34,8 @@ public class Seccion {
         contenedores[filaA][filaN] = null;
         return true;
     }
-    public void verContenedoresSeccion(){
-
+    public Contenedor[][] verContenedoresSeccion(){
+        return contenedores;
     }
     public void calcPesoTotal(){
 
