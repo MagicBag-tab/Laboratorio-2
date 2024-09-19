@@ -18,14 +18,6 @@ public class Main {
         int op = scanner.nextInt();
 
         while (op != 5){
-            System.out.println("MENU");
-            System.out.println("1. Almacenar Contenedores \n" +
-                            "2. Mostrar Información de los Contenedores \n" +
-                            "3. Mover Contenedores \n" +
-                            "4. Calcular el Peso Total por Sección \n" + 
-                            "5. Salir.");
-            System.out.println("Ingrese una opción");
-            op = scanner.nextInt();
 
             switch (op) {
                 case 1:
@@ -202,6 +194,15 @@ public class Main {
                     break;
             }
 
+            System.out.println("MENU");
+            System.out.println("1. Almacenar Contenedores \n" +
+                            "2. Mostrar Información de los Contenedores \n" +
+                            "3. Mover Contenedores \n" +
+                            "4. Calcular el Peso Total por Sección \n" + 
+                            "5. Salir.");
+            System.out.println("Ingrese una opción");
+            op = scanner.nextInt();
+            
             scanner.close();
         }
 
