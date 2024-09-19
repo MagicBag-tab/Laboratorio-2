@@ -73,7 +73,42 @@ public class Main {
                 break;
             case 2:
                 System.out.println("Mostrar Información de los Contenedores");
-
+                System.out.println("Mover Contenedores");
+                System.out.println("Seleccione una sección: \n" +
+                "1. Productos Electrónicos \n" +
+                "2. Ropa \n" +
+                "3. Alimentos \n" +
+                "4. Maquinaria \n");
+                int secc2 = scanner.nextInt();
+                Seccion select = null;
+                switch (secc2) {
+                    case 1:
+                        select = sec1;
+                        break;
+                    case 2:
+                        select = sec2;
+                        break;
+                    case 3:
+                        select = sec3;
+                        break;
+                    case 4:
+                        select = sec4;
+                        break;
+                    default:
+                        System.out.println("Sección seleccionada no válida");
+                        break;
+                }
+                if (select != null){
+                    System.out.println("Los contenedores de la sección " + select.getNombre() + "son: ");
+                    Contenedor [][] contenedores = select.verContenedoresSeccion();
+                    for(int fila = 0; fila < contenedores.length; fila ++){
+                        for(int columna = 0; columna < contenedores[fila].length; columna ++){
+                            if(contenedores[fila][columna] != null){
+                                System.out.println(contenedores[fila][columna]);
+                            }
+                        }
+                    }
+                }
                 break;
 
             case 3:
@@ -93,27 +128,27 @@ public class Main {
                 System.out.println("Ingrese la columna nueva al que desea mover elproducto");
                 int columnaN = scanner.nextInt();
 
-                Seccion select = null;
+                Seccion select2 = null;
 
                 switch (secc3) {
                     case 1:
-                        select = sec1;
+                        select2 = sec1;
                         break;
                     case 2:
-                        select = sec2;
+                        select2 = sec2;
                         break;
                     case 3:
-                        select = sec3;
+                        select2 = sec3;
                         break;
                     case 4:
-                        select = sec4;
+                        select2 = sec4;
                         break;
                     default:
                         System.out.println("Sección seleccionada no válida");
                         break;
                 }
-                if (select != null){
-                    boolean move = select.moverContenedor(filaA, columnaA, filaN, columnaN);
+                if (select2 != null){
+                    boolean move = select2.moverContenedor(filaA, columnaA, filaN, columnaN);
                     if (move){
                         System.out.println("El contenedor fue modificado de posición exitosamente");
                     } else {
