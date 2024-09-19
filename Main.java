@@ -106,7 +106,7 @@ public class Main {
                         for(int fila = 0; fila < contenedores.length; fila ++){
                             for(int columna = 0; columna < contenedores[fila].length; columna ++){
                                 if(contenedores[fila][columna] != null){
-                                    System.out.println(contenedores[fila][columna]);
+                                    System.out.println(contenedores[fila][columna].toString());
                                 }
                             }
                         }
@@ -202,7 +202,7 @@ public class Main {
                             "5. Salir.");
             System.out.println("Ingrese una opción");
             op = scanner.nextInt();
-            
+
             scanner.close();
         }
 
