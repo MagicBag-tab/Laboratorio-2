@@ -159,6 +159,30 @@ public class Main {
 
             case 4:
                 System.out.println("Calcular el Peso Total por Sección");
+                System.out.println("Seleccione una sección: \n" +
+                "1. Productos Electrónicos \n" +
+                "2. Ropa \n" +
+                "3. Alimentos \n" +
+                "4. Maquinaria \n");
+                int secc4 = scanner.nextInt();
+
+                switch (secc4) {
+                    case 1:
+                        System.out.println("El peso de la sección Productos Electrónicos es: " + sec1.calcPesoTotal());
+                        break;
+                    case 2:
+                        System.out.println("El peso de la sección Ropa es: " + sec2.calcPesoTotal());
+                        break;
+                    case 3:
+                        System.out.println("El peso de la sección Alimentos es: " + sec3.calcPesoTotal());
+                        break;
+                    case 4:
+                        System.out.println("El peso de la sección Maquinaria es: " + sec4.calcPesoTotal());
+                        break;
+                    default:
+                        System.out.println("Sección seleccionada no válida");
+                        break;
+                }
                 break;
             case 5:
                 System.out.println("Saliendo del programa... Feliz Día :D");
