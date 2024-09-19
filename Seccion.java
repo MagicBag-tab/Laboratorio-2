@@ -37,8 +37,8 @@ public class Seccion {
     public Contenedor[][] verContenedoresSeccion(){
         return contenedores;
     }
-    public void calcPesoTotal(){
-
+    public double calcPesoTotal(){
+        return pesot;
     }
 
     public String getNombre(){
