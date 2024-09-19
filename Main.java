@@ -12,7 +12,8 @@ public class Main {
         System.out.println("1. Almacenar Contenedores \n" +
                            "2. Mostrar Información de los Contenedores \n" +
                            "3. Mover Contenedores \n" +
-                           "4. Calcular el Peso Total por Sección \n");
+                           "4. Calcular el Peso Total por Sección \n" + 
+                           "5. Salir.");
         System.out.println("Ingrese una opción");
         int op = scanner.nextInt();
 
@@ -72,16 +73,61 @@ public class Main {
                 break;
             case 2:
                 System.out.println("Mostrar Información de los Contenedores");
+
                 break;
 
             case 3:
                 System.out.println("Mover Contenedores");
+                System.out.println("Seleccione una sección: \n" +
+                "1. Productos Electrónicos \n" +
+                "2. Ropa \n" +
+                "3. Alimentos \n" +
+                "4. Maquinaria \n");
+                int secc3 = scanner.nextInt();
+                System.out.println("Ingrese la fila actual del producto");
+                int filaA = scanner.nextInt();
+                System.out.println("Ingrese la columna actual del producto");
+                int columnaA = scanner.nextInt();
+                System.out.println("Ingrese la fila nueva al que desea mover el producto");
+                int filaN = scanner.nextInt();
+                System.out.println("Ingrese la columna nueva al que desea mover elproducto");
+                int columnaN = scanner.nextInt();
+
+                Seccion select = null;
+
+                switch (secc3) {
+                    case 1:
+                        select = sec1;
+                        break;
+                    case 2:
+                        select = sec2;
+                        break;
+                    case 3:
+                        select = sec3;
+                        break;
+                    case 4:
+                        select = sec4;
+                        break;
+                    default:
+                        System.out.println("Sección seleccionada no válida");
+                        break;
+                }
+                if (select != null){
+                    boolean move = select.moverContenedor(filaA, columnaA, filaN, columnaN);
+                    if (move){
+                        System.out.println("El contenedor fue modificado de posición exitosamente");
+                    } else {
+                        System.out.println("El contenedor no pudo ser modificado de posición");
+                    }
+                }
                 break;
 
             case 4:
                 System.out.println("Calcular el Peso Total por Sección");
                 break;
-        
+            case 5:
+                System.out.println("Saliendo del programa... Feliz Día :D");
+                break;
             default:
                 System.out.println("Elija una opción válida");
                 break;
