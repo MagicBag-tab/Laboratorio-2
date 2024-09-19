@@ -31,7 +31,7 @@ public class Seccion {
             return false;
         }
         contenedores[filaN][columnaN] = contenedores[filaA][columnaA];
-        contenedores[filaA][filaN] = null;
+        contenedores[filaA][columnaA] = null;
         return true;
     }
     public Contenedor[][] verContenedoresSeccion(){
