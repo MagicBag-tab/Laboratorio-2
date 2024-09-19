@@ -1,15 +1,12 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Seccion {
     String nombre;
     Double capacidad;
-    List<Contenedor> contenedores;
+    Contenedor[][] contenedores;
 
     public Seccion(String nombre, Double capacidad){
         this.nombre = nombre;
         this.capacidad = capacidad;
-        this.contenedores = new ArrayList<>();
+        this.contenedores = new Contenedor[10][5];
     }
 
     public void agregarContenedor(){
