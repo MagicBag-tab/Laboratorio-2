@@ -23,4 +23,8 @@ public class Contenedor {
     public String getDestino(){
         return destino;
     }
+
+    public String toString() {
+        return "ID: " + ID + ", Producto: " + producto + ", Peso: " + peso + " kg, Destino: " + destino;
+    }
 }
