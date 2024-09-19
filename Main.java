@@ -40,31 +40,35 @@ public class Main {
 
                 Contenedor cont = new Contenedor(id, product, peso, destiny);
 
+                boolean confirm = false;
+
                 switch (secc) {
                     case 1:
                         System.out.println("Productos Electrónicos");
-                        sec1.agregarContenedor(cont);
-                        System.out.println("El contenedor fue agregado exitosamente");
+                        confirm = sec1.agregarContenedor(cont);
                         break;
                     case 2:
                         System.out.println("Ropa");
-                        sec2.agregarContenedor(cont);
-                        System.out.println("El contenedor fue agregado exitosamente");
+                        confirm = sec2.agregarContenedor(cont);
                         break;
                     case 3:
                         System.out.println("Alimentos");
-                        sec3.agregarContenedor(cont);
-                        System.out.println("El contenedor fue agregado exitosamente");
+                        confirm = sec3.agregarContenedor(cont);
                         break;
                     case 4:
                         System.out.println("Maquinaria");
-                        sec4.agregarContenedor(cont);
-                        System.out.println("El contenedor fue agregado exitosamente");
+                        confirm = sec4.agregarContenedor(cont);
                         break;
                     default:
                         System.out.println("Seleccione una seccion válida");
                         break;
-                }
+                    }
+
+                    if (confirm = true){
+                        System.out.println("El contenedor fue agregado exitosamente");
+                    }else{
+                        System.out.println("El contenedor no fue agregado al exceder la capacidad del peso");
+                    }
                 break;
             case 2:
                 System.out.println("Mostrar Información de los Contenedores");
